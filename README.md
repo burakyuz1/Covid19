@@ -1,0 +1,2 @@
+# CoronaApi
+corona.burakakyuz.tk
