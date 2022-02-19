@@ -1,0 +1,35 @@
+﻿@model List<CoronaViewModel>
+
+<main>
+    <h1>ALL COUNTRIES</h1>
+    <section>
+        <table cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Country Name</th>
+                    <th>Total Cases</th>
+                    <th>Total Deaths</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+                @{
+                    int counter = 0;
+                }
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@(++counter)</td>
+                        <td>@item.CountryName</td>
+                        <td>@item.TotalCases</td>
+                        <td>@item.TotalDeaths</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </section>
+
+</main>
+

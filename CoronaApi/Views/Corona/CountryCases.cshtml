@@ -1,0 +1,53 @@
+﻿@model List<SelectListItem>
+@*<div class="row">
+    <div class="col-md-4">
+        <input value="Turkey" type="text" id="countryName" />
+        <input type="date" id="choosenDate" />
+        <button id="getCountryCase" class="btn btn-success btn-sm">Get</button>
+
+    </div>
+</div>*@
+
+
+
+
+<main class="detail">
+    <h1>Detail</h1>
+    <div class="search">
+        <select asp-items="@Model" id="countries-select" class="js-example-basic-single">
+        </select>
+    </div>
+    <div class="text-center">
+        <input class="" type="date" id="choosenDate" />
+        <button id="getCountryCase" class="btn btn-success btn-sm">Get</button>
+    </div>
+    <article class="cases" id="result">
+
+       
+    </article>
+</main>
+
+
+@section Scripts{
+
+    <script>
+    $("#getCountryCase").click(function(event){
+      
+        const countryName = $("#countries-select").val();
+        const choosenDate = $("#choosenDate").val();
+    
+        $.ajax({
+            type:"POST",
+            url:"@Url.Action("CountryCases","Corona")",
+            data: {cn:countryName,dt:choosenDate},
+            success: function(data){
+                $("#result").html(data);
+            }
+        })
+        event.preventDefault();
+    })
+
+
+
+    </script>
+}
