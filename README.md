@@ -1,4 +1,4 @@
-# CoronaApi
+
 [M-Media-Group](https://github.com/M-Media-Group/Covid-19-API) is used as API resource in my project.
 
 I request to the API using the .Net 5 asynchronous programming. I also used AJAX to render the page asynchronously.
