@@ -8,6 +8,3 @@ Since the API is updated daily by [M-Media-Group](https://github.com/M-Media-Gro
 
 API base:
 https://covid-api.mmediagroup.fr/v1
-
-Live Demo:
-https://corona.burakakyuz.tk/
